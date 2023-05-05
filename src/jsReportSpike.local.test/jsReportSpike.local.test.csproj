@@ -9,12 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="NewFolder\**" />
-    <EmbeddedResource Remove="NewFolder\**" />
-    <None Remove="NewFolder\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Content Remove="C:\Users\elias.oehen\.nuget\packages\microsoft.testplatform.testhost\17.1.0\build\netcoreapp2.1\x64\Microsoft.TestPlatform.PlatformAbstractions.dll" />
     <Content Remove="C:\Users\elias.oehen\.nuget\packages\microsoft.testplatform.testhost\17.1.0\build\netcoreapp2.1\x64\testhost.dll" />
     <Content Remove="C:\Users\elias.oehen\.nuget\packages\microsoft.testplatform.testhost\17.1.0\build\netcoreapp2.1\x64\testhost.exe" />
