@@ -1,38 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace jsReportSpike.local.test.fixture
+﻿namespace jsReportSpike.local.test.fixture
 {
     internal static class InvoiceFixtureBuilder
     {
         public static object BuildInvoiceData(int index)
         {
-            return new
+            return new InvoiceDto
             {
-                index,
+                index = index,
                 number = "56-457-5454",
-                seller = new
+                seller = new InvoiceAddressDto
                 {
                     name = "exanic AG",
                     road = "Weststrasse 3",
                     country = "6340 Baar"
                 },
-                buyer = new
+                buyer = new InvoiceAddressDto
                 {
                     name = "Acme Corp.",
                     road = "Ententeich 323",
                     country = "7000 Entenhausen"
                 },
-                items = new[]
+                items = new List<InvoiceItemDto>
                 {
-                    new { name = "Erster Eintrag", price = 300 },
-                    new { name = "Zweiter Eintrag", price = 55 },
-                    new { name = "Dritter Eintrag", price = 56 },
-                    new { name = "Vierter Eintrag", price = 57 },
-                    new { name = "F�nfter Eintrag", price = 58 }
+                    new InvoiceItemDto { name = "Erster Eintrag", price = 300 },
+                    new InvoiceItemDto { name = "Zweiter Eintrag", price = 55 },
+                    new InvoiceItemDto { name = "Dritter Eintrag", price = 56 },
+                    new InvoiceItemDto { name = "Vierter Eintrag", price = 57 },
+                    new InvoiceItemDto { name = "F�nfter Eintrag", price = 58 }
                 }
             };
         }
