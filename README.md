@@ -10,6 +10,7 @@
 - Include dynamic images or charts (js)
 - Localization
 - Fonts (pdf-interation)
+- Parallel running Problem with multiple local instances (f.e. parallel tests) not working.
 
 ## Setup Docker
 

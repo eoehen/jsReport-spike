@@ -23,13 +23,27 @@ namespace jsReportSpike.local.test
         }
 
         [Fact]
-        public async Task Local_ChromePdf_Rendering_With_Dyn_Data_To_Local_FileSystem_Test()
+        public async Task Local_ChromePdf_Rendering_With_Dyn_Data_By_Custome_RenderRequest_To_Local_FileSystem_Test()
+        {
+            var customReport = await localReportingSystem.RenderAsync(CustomRenderRequest);
+            customReport.Content.CopyTo(File.OpenWrite("customReport.pdf"));
+        }
+
+        [Fact]
+        public async Task Local_ChromePdf_Rendering_With_Dyn_Data_RenderByName_To_Local_FileSystem_Test()
         {
             var invoiceReport = await localReportingSystem.RenderByNameAsync("Invoice", InvoiceData);
             invoiceReport.Content.CopyTo(File.OpenWrite("invoice.pdf"));
+        }
 
-            var customReport = await localReportingSystem.RenderAsync(CustomRenderRequest);
-            customReport.Content.CopyTo(File.OpenWrite("customReport.pdf"));
+        [Fact]
+        public async Task Local_ChromePdf_Rendering_6_Times_With_Dyn_Data_RenderByName_To_Local_FileSystem_Test()
+        {
+            for (var i = 1; i < 7; i++)
+            {
+                var invoiceReport = await localReportingSystem.RenderByNameAsync($"Invoice{i}", BuildInvoiceData(i));
+                invoiceReport.Content.CopyTo(File.OpenWrite($"invoice{i}.pdf"));
+            }
         }
 
         private static RenderRequest CustomRenderRequest = new RenderRequest()
@@ -46,8 +60,38 @@ namespace jsReportSpike.local.test
             }
         };
 
+        private object BuildInvoiceData(int index)
+        {
+            return new
+            {
+                index,
+                number = "56-457-5454",
+                seller = new
+                {
+                    name = "exanic AG",
+                    road = "Weststrasse 3",
+                    country = "6340 Baar"
+                },
+                buyer = new
+                {
+                    name = "Acme Corp.",
+                    road = "Ententeich 323",
+                    country = "7000 Entenhausen"
+                },
+                items = new[]
+                {
+                    new { name = "Erster Eintrag", price = 300 },
+                    new { name = "Zweiter Eintrag", price = 55 },
+                    new { name = "Dritter Eintrag", price = 56 },
+                    new { name = "Vierter Eintrag", price = 57 },
+                    new { name = "F�nfter Eintrag", price = 58 }
+                }
+            };
+        }
+
         static object InvoiceData = new
         {
+            index = "0",
             number = "56-457-5454",
             seller = new
             {
@@ -64,7 +108,10 @@ namespace jsReportSpike.local.test
             items = new[]
     {
                 new { name = "Erster Eintrag", price = 300 },
-                new { name = "Zweiter Eintrag", price = 55 }
+                new { name = "Zweiter Eintrag", price = 55 },
+                new { name = "Dritter Eintrag", price = 56 },
+                new { name = "Vierter Eintrag", price = 57 },
+                new { name = "F�nfter Eintrag", price = 58 }
             }
         };
     }
