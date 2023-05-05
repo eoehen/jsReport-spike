@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  jsreport:
+    image: jsreport/jsreport:latest
+    container_name: jsreport-host
+    ports:
+      - "5488:5488" 
+    volumes:
+      - ./jsreport:/jsreport
