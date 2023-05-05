@@ -5,26 +5,20 @@ using jsreport.Types;
 
 namespace jsReportSpike.local.test
 {
+    [Collection("JsReportingSharedTestinstanceFixture")]
     public class SimpleLocalRenderingTest
     {
-        private readonly ILocalUtilityReportingService localReportingSystem;
+        private readonly JsReportingSharedTestinstanceFixture jsReportingSharedTestinstanceFixture;
 
-        public SimpleLocalRenderingTest()
+        public SimpleLocalRenderingTest(JsReportingSharedTestinstanceFixture jsReportingSharedTestinstanceFixture)
         {
-            var currentDirectoryPath = Path.Combine(Directory.GetCurrentDirectory(), "jsreport-bin");
-
-            localReportingSystem = 
-                new LocalReporting().UseBinary(JsReportBinary.GetBinary())
-                .RunInDirectory(currentDirectoryPath)
-                .Configure(cfg => cfg.DoTrustUserCode().BaseUrlAsWorkingDirectory())
-                .AsUtility()
-                .Create();
+            this.jsReportingSharedTestinstanceFixture = jsReportingSharedTestinstanceFixture;
         }
 
         [Fact]
         public async Task Local_ChromePdf_Rendering_With_Content_To_Local_FileSystem_Test()
         {
-            var report = await localReportingSystem.RenderAsync(new RenderRequest()
+            var report = await jsReportingSharedTestinstanceFixture.LocalReportingInstance.RenderAsync(new RenderRequest()
             {
                 Template = new Template()
                 {

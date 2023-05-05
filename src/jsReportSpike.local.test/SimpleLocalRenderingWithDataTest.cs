@@ -1,38 +1,30 @@
-using jsreport.Binary;
-using jsreport.Local;
 using jsreport.Types;
 
 namespace jsReportSpike.local.test
 {
+    [Collection("JsReportingSharedTestinstanceFixture")]
     public class SimpleLocalRenderingWithDataTest
     {
-        private readonly ILocalUtilityReportingService localReportingSystem;
+        private readonly JsReportingSharedTestinstanceFixture jsReportingSharedTestinstanceFixture;
 
-        public SimpleLocalRenderingWithDataTest()
+        public SimpleLocalRenderingWithDataTest(JsReportingSharedTestinstanceFixture jsReportingSharedTestinstanceFixture)
         {
-            var currentDirectoryPath = Path.Combine(Directory.GetCurrentDirectory(), "jsreport");
-
-            localReportingSystem =
-                new LocalReporting()
-                .UseBinary(JsReportBinary.GetBinary())
-                .RunInDirectory(currentDirectoryPath)
-                .KillRunningJsReportProcesses()
-                .Configure(cfg => cfg.DoTrustUserCode().FileSystemStore().BaseUrlAsWorkingDirectory())
-                .AsUtility()
-                .Create();
+            this.jsReportingSharedTestinstanceFixture = jsReportingSharedTestinstanceFixture;
         }
 
         [Fact]
         public async Task Local_ChromePdf_Rendering_With_Dyn_Data_By_Custome_RenderRequest_To_Local_FileSystem_Test()
         {
-            var customReport = await localReportingSystem.RenderAsync(CustomRenderRequest);
+            var customReport = await jsReportingSharedTestinstanceFixture.LocalReportingInstance
+                .RenderAsync(CustomRenderRequest);
             customReport.Content.CopyTo(File.OpenWrite("customReport.pdf"));
         }
 
         [Fact]
         public async Task Local_ChromePdf_Rendering_With_Dyn_Data_RenderByName_To_Local_FileSystem_Test()
         {
-            var invoiceReport = await localReportingSystem.RenderByNameAsync("Invoice", InvoiceData);
+            var invoiceReport = await jsReportingSharedTestinstanceFixture.LocalReportingInstance
+                .RenderByNameAsync("Invoice", InvoiceData);
             invoiceReport.Content.CopyTo(File.OpenWrite("invoice.pdf"));
         }
 
@@ -41,7 +33,8 @@ namespace jsReportSpike.local.test
         {
             for (var i = 1; i < 7; i++)
             {
-                var invoiceReport = await localReportingSystem.RenderByNameAsync($"Invoice{i}", BuildInvoiceData(i));
+                var invoiceReport = await jsReportingSharedTestinstanceFixture.LocalReportingInstance
+                    .RenderByNameAsync($"Invoice{i}", BuildInvoiceData(i));
                 invoiceReport.Content.CopyTo(File.OpenWrite($"invoice{i}.pdf"));
             }
         }
