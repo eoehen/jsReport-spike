@@ -19,7 +19,7 @@ namespace jsReportSpike.local.test
             {
                 var invoiceReport = await jsReportingSharedTestinstanceFixture.LocalReportingInstance
                     .RenderByNameAsync($"Invoice{i}", InvoiceFixtureBuilder.BuildInvoiceData(i));
-                invoiceReport.Content.CopyTo(File.OpenWrite($"invoice{i}.pdf"));
+                invoiceReport.Content.CopyTo(File.OpenWrite($"output/invoice{i}.pdf"));
             }
         }
     }
