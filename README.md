@@ -9,11 +9,15 @@
 - [ ] Template synchronisation from minio. (https://jsreport.net/learn/template-stores)
 - [ ] Upload result to minio / s3 storage.
 - [ ] Parallel running Problem with multiple local instances (f.e. parallel tests) not working.
+- [ ] Render eninges? (https://jsreport.net/learn/templating-engines)
+- [ ] Possible to combine with other pdf files.
+- [ ] Debugging
 
 ### Templating
 
 - [ ] Splitted templates for reusing (footer, header, reusing elements)
-- [ ] Shared style file (f.e. css), override shared style in template
+- [ ] Shared style file (f.e. css)
+- [ ] Override custom styles for a template
 
 ### Rendering
 
@@ -21,11 +25,14 @@
 - [x] condition in templates (if)
 - [x] Include dynamic images (base64)
 - [x] Fonts (pdf-integration)
-- [ ] Prepare splitted template and data. Replace dynamic data in template.
+- [x] Prepare splitted template and data. Replace dynamic data in template.
 - [ ] Localization
 - [ ] encoding (Ä,Ü,Ö)
 - [ ] render dynamic html elements from data.
 - [ ] Support of dynamic js scripts f.e. charts (js)
+- [ ] Page number (f.e. in footer template)
+- [ ] Page Format f.e. A4 or A5
+- [ ] Add Page break (https://jsreport.net/blog/pdf-report-paging-and-page-breaks)
 
 ## Setup Docker
 
@@ -52,6 +59,12 @@ docker-compose up -d
 **Product**
 
 https://jsreport.net
+
+### Engines
+
+**handlebars**
+
+https://handlebarsjs.com/
 
 ## Sync Templates
 
