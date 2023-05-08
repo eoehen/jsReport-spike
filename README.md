@@ -17,15 +17,15 @@
 
 ### Rendering
 
-- [ ] Prepare splitted template and data. Replace dynamic data in template.
 - [x] List of data (foreach)
 - [x] condition in templates (if)
 - [x] Include dynamic images (base64)
-- [ ] Support of dynamic js scripts f.e. charts (js)
-- [ ] Localization
 - [x] Fonts (pdf-integration)
+- [ ] Prepare splitted template and data. Replace dynamic data in template.
+- [ ] Localization
 - [ ] encoding (Ä,Ü,Ö)
 - [ ] render dynamic html elements from data.
+- [ ] Support of dynamic js scripts f.e. charts (js)
 
 ## Setup Docker
 

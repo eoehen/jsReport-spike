@@ -24,6 +24,7 @@
                 {
                     new InvoiceItemDto { name = "Erster Eintrag", price = 300 },
                     new InvoiceItemDto { name = "Zweiter Eintrag", price = 55 },
+                    new InvoiceItemDto { name = "0 CHF Eintrag", price = 0 },
                     new InvoiceItemDto { name = "Dritter Eintrag", price = 56 },
                     new InvoiceItemDto { name = "Vierter Eintrag", price = 57 },
                     new InvoiceItemDto { name = "F�nfter Eintrag", price = 58 }

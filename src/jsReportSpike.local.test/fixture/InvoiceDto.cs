@@ -19,6 +19,7 @@
 
     internal class InvoiceItemDto
     {
+        public bool visible => price > 0;
         public string name { get; set; }
         public decimal price { get; set; }
     }
