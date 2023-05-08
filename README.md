@@ -19,11 +19,11 @@
 
 - [ ] Prepare splitted template and data. Replace dynamic data in template.
 - [x] List of data (foreach)
-- [ ] condition in templates (if)
+- [x] condition in templates (if)
 - [x] Include dynamic images (base64)
 - [ ] Support of dynamic js scripts f.e. charts (js)
 - [ ] Localization
-- [ ] Fonts (pdf-integration)
+- [x] Fonts (pdf-integration)
 - [ ] encoding (Ä,Ü,Ö)
 - [ ] render dynamic html elements from data.
 
