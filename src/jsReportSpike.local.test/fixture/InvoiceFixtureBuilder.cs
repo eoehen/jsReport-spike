@@ -2,7 +2,7 @@
 {
     internal static class InvoiceFixtureBuilder
     {
-        public static object BuildInvoiceData(int index)
+        public static InvoiceDto BuildInvoiceData(int index)
         {
             return new InvoiceDto
             {

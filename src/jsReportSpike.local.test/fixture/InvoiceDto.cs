@@ -6,6 +6,7 @@
         public string number { get; set; }
         public InvoiceAddressDto seller { get; set; }
         public InvoiceAddressDto buyer { get; set; }
+        public string base64Image { get; set; }
         public List<InvoiceItemDto> items { get; set; } = new List<InvoiceItemDto>();
     }
 

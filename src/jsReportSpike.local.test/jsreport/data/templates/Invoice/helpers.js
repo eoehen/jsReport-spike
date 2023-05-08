@@ -16,3 +16,11 @@ function total(items) {
     })
     return sum
 }
+
+
+// Encoding ????
+
+//const iconv = require('iconv-lite');
+//function afterRender(req, res) {
+//    res.content = Buffer.from(iconv.encode(res.content.toString(), 'win1252'), 'binary')
+//}
