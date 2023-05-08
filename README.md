@@ -48,6 +48,8 @@ https://hub.docker.com/r/jsreport/jsreport
 
 Startup jsReport host docker container.
 
+> Published on Port : `15488`
+
 `.\docker\docker-compose.yml`
 
 ```

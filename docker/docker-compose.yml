@@ -5,6 +5,6 @@ services:
     image: jsreport/jsreport:latest
     container_name: jsreport-host
     ports:
-      - "5488:5488" 
+      - "15488:5488" 
     volumes:
       - ./jsreport:/jsreport
