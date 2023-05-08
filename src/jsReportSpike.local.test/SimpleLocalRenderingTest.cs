@@ -1,6 +1,4 @@
 using FluentAssertions;
-using jsreport.Binary;
-using jsreport.Local;
 using jsreport.Types;
 
 namespace jsReportSpike.local.test
@@ -31,23 +29,7 @@ namespace jsReportSpike.local.test
             report.Should().NotBeNull();
             report.Content.Should().NotBeNull();
 
-            var outputFolderPath = @".\output\";
-
-            if (!Directory.Exists(outputFolderPath))
-                Directory.CreateDirectory(outputFolderPath);
-
-            var outputFilePath = @".\output\test.pdf";
-
-            if (File.Exists(outputFilePath))
-                File.Delete(outputFilePath);
-
-            using (var fileStream = File.Create(outputFilePath))
-            {
-                report.Content.Seek(0, SeekOrigin.Begin);
-                report.Content.CopyTo(fileStream);
-            }
-
-            File.Exists(outputFilePath).Should().BeTrue();
+            report.Content.CopyTo(File.OpenWrite($"output/content-rendering.pdf"));
         }
     }
 }

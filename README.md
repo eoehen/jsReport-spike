@@ -26,13 +26,13 @@
 - [x] Include dynamic images (base64)
 - [x] Fonts (pdf-integration)
 - [x] Prepare splitted template and data. Replace dynamic data in template.
-- [ ] Localization
-- [ ] encoding (Ä,Ü,Ö)
+- [x] encoding (Ä,Ü,Ö) --> Template must have the correct encoding.
 - [ ] render dynamic html elements from data.
 - [ ] Support of dynamic js scripts f.e. charts (js)
 - [ ] Page number (f.e. in footer template)
 - [ ] Page Format f.e. A4 or A5
 - [ ] Add Page break (https://jsreport.net/blog/pdf-report-paging-and-page-breaks)
+- [ ] Localization
 
 ## Setup Docker
 
