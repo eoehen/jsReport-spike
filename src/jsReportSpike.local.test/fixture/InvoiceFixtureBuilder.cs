@@ -28,7 +28,9 @@
                     new InvoiceItemDto { name = "Dritter Eintrag", price = 56 },
                     new InvoiceItemDto { name = "Vierter Eintrag", price = 57 },
                     new InvoiceItemDto { name = "Fünfter Eintrag", price = 58 }
-                }
+                },
+                dynHtml = @"<b>This is a dyn Html content</b>" +
+                    "<ul><li>Example 1</li><li>Example 2</li><li>Example 3</li></ul>"
             };
         }
     }

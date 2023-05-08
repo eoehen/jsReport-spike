@@ -8,6 +8,8 @@
         public InvoiceAddressDto buyer { get; set; }
         public string base64Image { get; set; }
         public List<InvoiceItemDto> items { get; set; } = new List<InvoiceItemDto>();
+        public string dynHtml { get; set; }
+
     }
 
     internal class InvoiceAddressDto
