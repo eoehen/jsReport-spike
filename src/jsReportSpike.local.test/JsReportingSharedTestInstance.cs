@@ -1,5 +1,6 @@
 ﻿using jsreport.Binary;
 using jsreport.Local;
+using System.Runtime.InteropServices;
 
 namespace jsReportSpike.local.test
 {
@@ -14,7 +15,11 @@ namespace jsReportSpike.local.test
 
             localReportingSystem =
                 new LocalReporting()
-                .UseBinary(JsReportBinary.GetBinary())
+
+                .UseBinary(RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ?
+                    JsReportBinary.GetBinary() :
+                    jsreport.Binary.Linux.JsReportBinary.GetBinary())
+
                 .RunInDirectory(currentDirectoryPath)
                 .KillRunningJsReportProcesses()
                 .Configure(cfg => cfg.DoTrustUserCode().FileSystemStore().BaseUrlAsWorkingDirectory())

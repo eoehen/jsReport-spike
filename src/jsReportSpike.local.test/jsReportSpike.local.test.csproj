@@ -29,6 +29,7 @@
   <ItemGroup>
     <PackageReference Include="FluentAssertions" Version="6.11.0" />
     <PackageReference Include="jsreport.Binary" Version="3.11.0" />
+    <PackageReference Include="jsreport.Binary.Linux" Version="3.11.0" />
     <PackageReference Include="jsreport.Client" Version="3.8.0" />
     <PackageReference Include="jsreport.Local" Version="3.8.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.5.0" />
