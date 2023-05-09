@@ -29,6 +29,7 @@
   <ItemGroup>
     <PackageReference Include="FluentAssertions" Version="6.11.0" />
     <PackageReference Include="jsreport.Binary" Version="3.11.0" />
+    <PackageReference Include="jsreport.Binary.Linux" Version="3.11.0" />
     <PackageReference Include="jsreport.Client" Version="3.8.0" />
     <PackageReference Include="jsreport.Local" Version="3.8.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.5.0" />
@@ -196,6 +197,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="jsreport\data\templates\Invoice\helpers.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="output\.gitkeep">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
