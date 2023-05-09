@@ -28,7 +28,7 @@
 - [x] Prepare splitted template and data. Replace dynamic data in template.
 - [x] encoding (Ä,Ü,Ö) --> Template must have the correct encoding.
 - [x] render dynamic html elements from data. --> use dribble brackets `{{{dynHtml}}}`
-- [ ] Add Page break (https://jsreport.net/blog/pdf-report-paging-and-page-breaks)
+- [x] Add Page break (https://jsreport.net/blog/pdf-report-paging-and-page-breaks)
 - [ ] Page number (f.e. in footer template)
 - [ ] Page Format f.e. A4 or A5
 - [ ] Localization
