@@ -1,6 +1,4 @@
-﻿using System.Drawing;
-using System.Drawing.Imaging;
-using System.Reflection;
+﻿using System.Reflection;
 
 namespace jsReportSpike.local.test.fixture
 {
@@ -13,18 +11,29 @@ namespace jsReportSpike.local.test.fixture
             assembly = Assembly.GetAssembly(typeof(EmbeddedImageResourceLoader));
         }
 
-        public string LoadImageAsBase64(string key)
+        public byte[]? ReadManifestResourceAsBinaryArray(string key)
         {
-            var stream = assembly.GetManifestResourceStream("jsReportSpike.local.test.fixture.data.emer-logo.png");
-
-            using (var ms = new MemoryStream())
+            if (assembly != null)
             {
-                using (var bitmap = new Bitmap(stream))
+                var stream = assembly.GetManifestResourceStream("jsReportSpike.local.test.fixture.data.emer-logo.png");
+                using MemoryStream ms = new();
+                if (stream != null)
                 {
-                    bitmap.Save(ms, ImageFormat.Png);
-                    return "data:image/png;base64," + Convert.ToBase64String(ms.GetBuffer());
+                    stream.CopyTo(ms);
+                    return ms.ToArray();
                 }
             }
+            return null;
+        }
+
+        public string LoadImageAsBase64(string key)
+        {
+            var binaryArray = ReadManifestResourceAsBinaryArray(key);
+            if (binaryArray != null)
+            {
+                return "data:image/png;base64," + Convert.ToBase64String(binaryArray);
+            }
+            return string.Empty;
         }
     }
 }
