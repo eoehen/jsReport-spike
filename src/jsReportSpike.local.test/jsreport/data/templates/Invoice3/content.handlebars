@@ -1,14 +1,12 @@
-<!-- 
-Invoice dynamically rendered into html using handlebars and converted into pdf
-using phantom-pdf recipe. The styles are extracted into separate asset for 
-better readability and later reuse.
-
-Data to this sample are mocked at the design time and should be filled on the 
-incoming API request.
-!-->
+<style>
+    {#asset Invoice styles.css @encoding=utf8}
+</style>
 
 <style>
-    {#asset Invoice styles.css @encoding=utf8 }
+    .page-break {
+        display: block;
+        page-break-before: always;
+    }
 </style>
 
 <div class="invoice-box">
@@ -73,4 +71,15 @@ incoming API request.
             </td>
         </tr>
     </table>
+
 </div>
+
+<h1>Hello from Page 1</h1>
+
+<div style='page-break-before: always;'></div>
+
+<h1>Hello from Page 2</h1>
+
+<div class='page-break'></div>
+
+<h1>Hello from Page 2</h1>
