@@ -4,14 +4,17 @@
 
 ### Infra
 
-- [ ] Test jsReport studio (pro / contra)
-- [ ] Rendering server container with request
-- [ ] Template synchronisation from minio. (https://jsreport.net/learn/template-stores)
-- [ ] Upload result to minio / s3 storage.
+- [x] Container availability check - http://jsreport-host/api/ping (https://jsreport.net/learn/api#ping)
+- [x] Secure API behind authentication (https://jsreport.net/learn/authentication)
+- [x] Rendering server container with request
+- [ ] Template synchronisation from minio. (https://jsreport.net/learn/template-stores) - at the moment only to filesystem
+- [ ] Upload result to minio / s3 storage. - at the moment only to filesystem
 - [ ] Parallel running Problem with multiple local instances (f.e. parallel tests) not working.
 - [ ] Render eninges? (https://jsreport.net/learn/templating-engines)
 - [ ] Possible to combine with other pdf files.
 - [ ] Debugging
+- [ ] Test jsReport studio (pro / contra)
+
 
 ### Templating
 
