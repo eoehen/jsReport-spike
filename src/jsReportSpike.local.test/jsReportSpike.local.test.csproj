@@ -109,6 +109,18 @@
     <None Update="jsreport\data\templates\Invoice2\helpers.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="jsreport\data\templates\Invoice-footer-header\config.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="jsreport\data\templates\Invoice-footer-header\content.handlebars">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="jsreport\data\templates\Invoice-footer-header\header-footer.handlebars">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="jsreport\data\templates\Invoice-footer-header\helpers.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="jsreport\data\templates\Invoice3\config.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

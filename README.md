@@ -20,7 +20,7 @@
 
 - [x] Shared style file (f.e. css)
 - [x] Override custom styles for a template
-- [ ] Splitted templates for reusing (footer, header, reusing elements)
+- [ ] Splitted templates for reusing (footer, header, reusing elements) https://handlebarsjs.com/guide/partials.html#basic-partials
 
 ### Rendering
 
@@ -36,6 +36,7 @@
 - [ ] Page number (f.e. in footer template)
 - [ ] Page Format f.e. A4 or A5
 - [ ] Localization
+- [ ] Formating of datetime or numbers.
 - [ ] Support of dynamic js scripts f.e. charts (js)
 
 ## Setup Docker
