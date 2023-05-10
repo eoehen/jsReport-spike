@@ -94,6 +94,48 @@
     <None Update="jsreport\data\templates\encoding\helpers.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="jsreport\data\templates\Invoice-footer-header\header-footer\config.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="jsreport\data\templates\Invoice-footer-header\header-footer\content.handlebars">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="jsreport\data\templates\Invoice-footer-header\header-footer\helpers.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="jsreport\data\templates\Invoice-footer-header\invoice-data\config.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="jsreport\data\templates\Invoice-footer-header\invoice-data\dataJson.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="jsreport\data\templates\Invoice-footer-header\invoice-logo.png\config.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="jsreport\data\templates\Invoice-footer-header\invoice-logo.png\content.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="jsreport\data\templates\Invoice-footer-header\invoice-main\config.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="jsreport\data\templates\Invoice-footer-header\invoice-main\content.handlebars">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="jsreport\data\templates\Invoice-footer-header\invoice-main\footerTemplate.handlebars">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="jsreport\data\templates\Invoice-footer-header\invoice-main\headerTemplate.handlebars">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="jsreport\data\templates\Invoice-footer-header\invoice-main\helpers.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="jsreport\data\templates\Invoice-footer-header\invoice-styles.css\config.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="jsreport\data\templates\Invoice-footer-header\invoice-styles.css\content.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="jsreport\data\templates\Invoice2\config.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -107,6 +149,18 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="jsreport\data\templates\Invoice2\helpers.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="jsreport\data\templates\Invoice-footer-header\config.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="jsreport\data\templates\Invoice-footer-header\content.handlebars">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="jsreport\data\templates\Invoice-footer-header\header-footer.handlebars">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="jsreport\data\templates\Invoice-footer-header\helpers.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="jsreport\data\templates\Invoice3\config.json">

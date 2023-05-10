@@ -15,14 +15,7 @@
 - [ ] Debugging
 - [ ] Test jsReport studio (pro / contra)
 
-
-### Templating
-
-- [x] Shared style file (f.e. css)
-- [x] Override custom styles for a template
-- [ ] Splitted templates for reusing (footer, header, reusing elements)
-
-### Rendering
+### Rendering / Templateing
 
 - [x] List of data (foreach)
 - [x] condition in templates (if)
@@ -32,11 +25,18 @@
 - [x] encoding (Ä,Ü,Ö) --> Template must have the correct encoding.
 - [x] render dynamic html elements from data. --> use dribble brackets `{{{dynHtml}}}`
 - [x] Add Page break (https://jsreport.net/blog/pdf-report-paging-and-page-breaks)
-- [x] Html rendering (UseCase: E-Mail Templating)
-- [ ] Page number (f.e. in footer template)
+- [x] Shared style file (f.e. css)
+- [x] Override custom styles for a template
+- [x] Support for Header and Footer with page number
 - [ ] Page Format f.e. A4 or A5
 - [ ] Localization
+- [ ] Formating of datetime or numbers.
+
+### Low Prio / nice to have
+
+- [ ] Html rendering (UseCase: E-Mail Templating)
 - [ ] Support of dynamic js scripts f.e. charts (js)
+- [ ] Splitted templates for reusing https://handlebarsjs.com/guide/partials.html#basic-partials
 
 ## Setup Docker
 
