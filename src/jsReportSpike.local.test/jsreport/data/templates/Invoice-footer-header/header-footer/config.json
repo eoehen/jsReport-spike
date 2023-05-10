@@ -1,0 +1,16 @@
+{
+    "name": "header-footer",
+    "engine": "handlebars",
+    "recipe": "chrome-pdf",
+    "creationDate": {
+        "$$date": 1683699939063
+    },
+    "modificationDate": {
+        "$$date": 1683699958666
+    },
+    "shortid": "gKhyu4a",
+    "inheritedReadPermissions": [],
+    "inheritedEditPermissions": [],
+    "_id": "vQNIhO5swyooPcYy",
+    "$entitySet": "templates"
+}

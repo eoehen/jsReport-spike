@@ -1,6 +1,6 @@
 {
-  "_id": "6czsiKRhZT5eCH0T",
-  "shortid": "GNEHRP",
-  "$entitySet": "folders",
-  "name": "Invoice-footer-header"
+    "_id": "6czsiKRhZT5eCH0T",
+    "shortid": "GNEHRP",
+    "$entitySet": "folders",
+    "name": "Invoice"
 }
