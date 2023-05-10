@@ -1,11 +1,11 @@
 {
     "store": {
-		"provider": "fs" 
+		"provider": "fs"
 	},
     "httpPort": 5488,
     "trustUserCode": false,
     "blobStorage": {
-		"provider": "fs"
+		"provider": "aws-s3-storage"
 	},
     "reportTimeout": 60000,
     "extensions": {
@@ -25,8 +25,33 @@
 			"cleanThreshold": "30d" 
 		},
 		"fs-store": {
-			"enabled": true,
-			"externalModificationsSync": true
+			"persistence": {
+				"provider": "aws-s3"
+			}
+		},			
+		"fs-store-aws-s3-persistence":{
+			"accessKeyId": "0lSPbdwgO4roWqcD",
+			"secretAccessKey": "42ByR9qU0bk9eyrRPJJSZ9FMvlNi59FT",
+			"bucket": "templates",
+			"lock": {
+				"enabled": false
+			},
+			"s3Options": {
+				"endpoint": "http://172.17.0.3:9000/",
+				"s3ForcePathStyle": true
+			}
+		},
+		"aws-s3-storage": {
+			"accessKeyId": "0lSPbdwgO4roWqcD",
+			"secretAccessKey": "42ByR9qU0bk9eyrRPJJSZ9FMvlNi59FT",
+			"bucket": "data",
+			"lock": {
+				"enabled": false
+			},
+			"s3Options": {
+				"endpoint": "http://172.17.0.3:9000/",
+				"s3ForcePathStyle": true
+			}
 		}
 	}
 }
