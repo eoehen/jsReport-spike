@@ -29,7 +29,7 @@
 - [x] Override custom styles for a template
 - [x] Support for Header and Footer with page number
 - [x] Render same template with different output configurations. --> Fluent request builder extension would be nice.
-- [ ] Page Format f.e. A4, A5 or custom size
+- [x] Page Format f.e. A4, A5 or custom size
 - [ ] Localization
 - [ ] Formating of datetime or numbers.
 
