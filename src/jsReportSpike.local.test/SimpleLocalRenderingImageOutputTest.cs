@@ -37,6 +37,48 @@ namespace jsReportSpike.local.test
         }
 
         [Fact]
+        public async Task Local_ChromePdf_Rendering_Same_Template_With_different_output_Format_Test()
+        {
+            var data = InvoiceFixtureBuilder.BuildInvoiceData(1);
+
+            var invoiceReportPng = await jsReportingSharedTestinstanceFixture.LocalReportingInstance
+                .RenderAsync(new RenderRequest()
+                {
+                    Template = new Template()
+                    {
+                        Recipe = Recipe.ChromeImage,
+                        Engine = Engine.Handlebars,
+                        Name = "ToImageTemplate",
+                        ChromeImage = new ChromeImage
+                        {
+                            Type = "png",
+                        }
+                    },
+                    Data = data
+                });
+
+            invoiceReportPng.Content.CopyTo(File.OpenWrite($"output/template-rendered-image2.png"));
+
+            var invoiceReportJpeg = await jsReportingSharedTestinstanceFixture.LocalReportingInstance
+                .RenderAsync(new RenderRequest()
+                {
+                    Template = new Template()
+                    {
+                        Recipe = Recipe.ChromeImage,
+                        Engine = Engine.Handlebars,
+                        Name = "ToImageTemplate",
+                        ChromeImage = new ChromeImage
+                        {
+                            Type = "jpeg",
+                        }
+                    },
+                    Data = data
+                });
+
+            invoiceReportJpeg.Content.CopyTo(File.OpenWrite($"output/template-rendered-image2.jpeg"));
+        }
+
+        [Fact]
         public async Task Local_ChromePdf_Rendering_Template_To_Image_png_Output_Test()
         {
             var data = InvoiceFixtureBuilder.BuildInvoiceData(1);
