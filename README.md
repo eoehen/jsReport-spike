@@ -35,7 +35,7 @@
 ### Low Prio / nice to have
 
 - [x] Html rendering (UseCase: E-Mail Templating) --> The `CopyToAsync` with content not working.
-- [ ] Render to image (UseCase: Tumbnails)
+- [x] Render to image (UseCase: Tumbnails)
 - [ ] Splitted templates for reusing https://handlebarsjs.com/guide/partials.html#basic-partials, https://jsreport.net/learn/child-templates?version=2.11.0
 - [ ] Support of dynamic js scripts f.e. charts (js)
 

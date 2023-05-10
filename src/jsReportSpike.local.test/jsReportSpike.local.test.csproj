@@ -79,6 +79,21 @@
     <None Update="jsreport\data\templates\dynHtml\helpers.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="jsreport\data\templates\ToImageTemplate\config.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="jsreport\data\templates\ToImageTemplate\content.handlebars">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="jsreport\data\templates\ToImageTemplate\footer.handlebars">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="jsreport\data\templates\ToImageTemplate\header.handlebars">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="jsreport\data\templates\ToImageTemplate\helpers.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="jsreport\data\templates\ToHtmlTemplate\config.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
