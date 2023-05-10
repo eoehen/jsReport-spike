@@ -15,7 +15,7 @@ namespace jsReportSpike.local.test.fixture
         {
             if (assembly != null)
             {
-                var stream = assembly.GetManifestResourceStream("jsReportSpike.local.test.fixture.data.emer-logo.png");
+                var stream = assembly.GetManifestResourceStream(key);
                 using MemoryStream ms = new();
                 if (stream != null)
                 {
