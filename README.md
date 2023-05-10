@@ -28,15 +28,16 @@
 - [x] Shared style file (f.e. css)
 - [x] Override custom styles for a template
 - [x] Support for Header and Footer with page number
-- [ ] Page Format f.e. A4 or A5
+- [ ] Page Format f.e. A4, A5 or custom size
 - [ ] Localization
 - [ ] Formating of datetime or numbers.
 
 ### Low Prio / nice to have
 
-- [ ] Html rendering (UseCase: E-Mail Templating)
+- [x] Html rendering (UseCase: E-Mail Templating) --> The `CopyToAsync` with content not working.
+- [ ] Render to image (UseCase: Tumbnails)
+- [ ] Splitted templates for reusing https://handlebarsjs.com/guide/partials.html#basic-partials, https://jsreport.net/learn/child-templates?version=2.11.0
 - [ ] Support of dynamic js scripts f.e. charts (js)
-- [ ] Splitted templates for reusing https://handlebarsjs.com/guide/partials.html#basic-partials
 
 ## Setup Docker
 
