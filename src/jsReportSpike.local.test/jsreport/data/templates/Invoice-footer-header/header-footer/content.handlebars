@@ -1,49 +1,56 @@
 <html>
-    <head>
-        <style>
-          * {
-              box-sizing: border-box;
-          }
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <style>
+        {{asset "invoice-styles.css" "utf8"}}
+    </style>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-          html, body {
-              margin: 0px;
-              padding: 0px;
-          }
+        html, body {
+            margin: 0px;
+            padding: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
 
-          .main {
-              display: flex;
-              flex-direction: column;
-              justify-content: space-between;
-              width: 100%;
-              height: 100%;
-          }
+        .main {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+        }
 
-          .header {
-              width: 100%;
-              padding-top: 20px;
-              border-bottom: 1px solid black;
-          }
+        .header {
+            width: 100%;
+            padding-top: 20px;
+            border-bottom: 1px solid black;
+        }
 
-          .footer {
-              width: 100%;
-              padding-bottom: 20px;
-              border-top: 1px solid black;
-          }
-        </style>
-    </head>
-    <body>
-        {{#each $pdf.pages}}
-          {{#if @index}}
-            <div style="page-break-before: always;"></div>
-          {{/if}}
-          <main class="main">
-            <header class="header">
-              This is a header
-            </header>
-            <footer class="footer">
-                <span>Page {{getPageNumber @index}} of {{getTotalPages ../$pdf.pages}}</span>
-            </footer>
-          </main>
-        {{/each}}
-    </body>
+        .footer {
+            width: 100%;
+            padding-bottom: 20px;
+            border-top: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    {{#each $pdf.pages}}
+    {{#if @index}}
+    <div style="page-break-before: always;"></div>
+    {{/if}}
+    <main class="main">
+        <header class="header">
+            <img src="{#asset Invoice logo.png @encoding=dataURI}" style="width:50px;" />
+            exanic AG | Baar | Switzerland
+        </header>
+        <footer class="footer">
+            <span>Page {{getPageNumber @index}} of {{getTotalPages ../$pdf.pages}}</span>
+        </footer>
+    </main>
+    {{/each}}
+</body>
 </html>
