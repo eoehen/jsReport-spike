@@ -37,7 +37,7 @@ namespace jsReportSpike.local.test
         }
 
         [Fact]
-        public async Task Local_ChromePdf_Rendering_Template_To_Image_Output_Test()
+        public async Task Local_ChromePdf_Rendering_Template_To_Image_png_Output_Test()
         {
             var data = InvoiceFixtureBuilder.BuildInvoiceData(1);
 
@@ -45,6 +45,17 @@ namespace jsReportSpike.local.test
                 .RenderByNameAsync($"ToImageTemplate", data);
 
             invoiceReport.Content.CopyTo(File.OpenWrite($"output/template-rendered-image.png"));
+        }
+
+        [Fact]
+        public async Task Local_ChromePdf_Rendering_Template_To_Jpeg_Image_Output_Test()
+        {
+            var data = InvoiceFixtureBuilder.BuildInvoiceData(1);
+
+            var invoiceReport = await jsReportingSharedTestinstanceFixture.LocalReportingInstance
+                .RenderByNameAsync($"ToJpegImageTemplate", data);
+
+            invoiceReport.Content.CopyTo(File.OpenWrite($"output/template-rendered-image.jpeg"));
         }
 
         public static string StreamToString(Stream stream)
