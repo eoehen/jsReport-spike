@@ -1,0 +1,5 @@
+{
+  "invoice": "Invoice",
+  "createAt": "Created At",
+  "payedAt": "Payed At"
+}
