@@ -9,11 +9,10 @@
 - [x] Rendering server container with request
 - [x] Template synchronisation from minio. (https://jsreport.net/learn/template-stores)
 - [x] Upload result to minio / s3 storage.
+- [x] Render eninges? (https://jsreport.net/learn/templating-engines) - handlebars
+- [x] Debugging/Error Logging - Error logs available in jsreport Studio for all failed renders
+- [x] Test jsReport studio (pro / contra) - development both in jsReport studio and prefered IDE possible
 - [ ] Parallel running Problem with multiple local instances (f.e. parallel tests) not working.
-- [ ] Render eninges? (https://jsreport.net/learn/templating-engines)
-- [ ] Possible to combine with other pdf files.
-- [ ] Debugging
-- [ ] Test jsReport studio (pro / contra)
 
 ### Rendering / Templateing
 
@@ -39,6 +38,7 @@
 - [x] Render to image (UseCase: Tumbnails)
 - [ ] Splitted templates for reusing https://handlebarsjs.com/guide/partials.html#basic-partials, https://jsreport.net/learn/child-templates?version=2.11.0
 - [ ] Support of dynamic js scripts f.e. charts (js)
+- [ ] Possible to combine with other pdf files.
 
 ## Setup Docker
 
@@ -49,6 +49,11 @@ Required `https://docs.docker.com/desktop/`
 **Docker Hub**
 
 https://hub.docker.com/r/jsreport/jsreport
+
+**jsreport-config**
+
+Rename either `.\docker\jsreport\jsreport-templatestore-filesystem.config.json` or `.\docker\jsreport\jsreport-templatestore-minio.config.json`
+to `.\docker\jsreport\jsreport.config.json` to activate config file for needed template store.
 
 **docker-compose**
 
