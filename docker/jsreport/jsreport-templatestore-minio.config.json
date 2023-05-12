@@ -5,7 +5,7 @@
     "httpPort": 5488,
     "trustUserCode": false,
     "blobStorage": {
-		"provider": "aws-s3-storage"
+		"provider": "fs"
 	},
     "reportTimeout": 60000,
     "extensions": {
@@ -20,9 +20,8 @@
 			}
 		},
 		"pdf-utils": {},
-		"reports" : {
-			"cleanInterval": "1d",
-			"cleanThreshold": "30d" 
+		"version-control": { 
+		  "enabled": false 
 		},
 		"fs-store": {
 			"persistence": {
@@ -33,18 +32,6 @@
 			"accessKeyId": "0lSPbdwgO4roWqcD",
 			"secretAccessKey": "42ByR9qU0bk9eyrRPJJSZ9FMvlNi59FT",
 			"bucket": "templates",
-			"lock": {
-				"enabled": false
-			},
-			"s3Options": {
-				"endpoint": "http://172.17.0.3:9000/",
-				"s3ForcePathStyle": true
-			}
-		},
-		"aws-s3-storage": {
-			"accessKeyId": "0lSPbdwgO4roWqcD",
-			"secretAccessKey": "42ByR9qU0bk9eyrRPJJSZ9FMvlNi59FT",
-			"bucket": "data",
 			"lock": {
 				"enabled": false
 			},

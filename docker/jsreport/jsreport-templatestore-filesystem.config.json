@@ -1,0 +1,33 @@
+{
+    "store": {
+		"provider": "fs" 
+	},
+    "httpPort": 5488,
+    "trustUserCode": false,
+    "blobStorage": {
+		"provider": "fs"
+	},
+    "reportTimeout": 60000,
+    "extensions": {
+		"authentication" : {
+			"cookieSession": {
+				"secret": "dasd321as56d1sd5s61vdv32",
+						"cookie": {}
+			},
+			"admin": {
+				"username" : "admin",
+				"password": "password"
+			}
+		},
+		"pdf-utils": {},
+		"version-control": { 
+		  "enabled": false 
+		},
+		"fs-store": {
+			"externalModificationsSync": true
+		},
+		"version-control": { 
+		  "enabled": false 
+		}
+	}
+}
