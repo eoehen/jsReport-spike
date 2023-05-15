@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="jsreport.Binary" Version="3.11.0" />
+    <PackageReference Include="jsreport.Binary.Linux" Version="3.11.0" />
+    <PackageReference Include="jsreport.Client" Version="3.8.0" />
+    <PackageReference Include="jsreport.Local" Version="3.8.1" />
+    <PackageReference Include="Mapster" Version="7.3.0" />
+  </ItemGroup>
+
+</Project>
